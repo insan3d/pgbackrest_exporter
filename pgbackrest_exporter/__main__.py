@@ -8,8 +8,8 @@ status information and provides Prometheus-compatible
 """
 
 __prog__ = "pgbackrest_exporter"
-__version__ = "0.1.0"
-__status__ = "Development"
+__version__ = "1.0.0"
+__status__ = "Release"
 __author__ = "Alexander Pozlevich"
 __email__ = "a.pozlevich@big3.ru"
 
