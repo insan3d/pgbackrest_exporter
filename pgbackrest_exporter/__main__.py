@@ -11,7 +11,7 @@ __prog__ = "pgbackrest_exporter"
 __version__ = "1.0.0"
 __status__ = "Release"
 __author__ = "Alexander Pozlevich"
-__email__ = "a.pozlevich@big3.ru"
+__email__ = "apozlevich@gmail.com"
 
 import pathlib
 import sys
