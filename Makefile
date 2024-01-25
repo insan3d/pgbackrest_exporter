@@ -9,7 +9,7 @@
 #
 # Default target is to build PyInstaller binary.
 
-.PHONY: clean lint tests image ./dist/pgbackrest_exporter
+.PHONY: clean lint tests image ./dist/pgbackrest_exporter.xz
 .DEFAULT_GOAL := binary
 
 venv:
@@ -34,6 +34,8 @@ binary: ./dist/pgbackrest_exporter
 	. ./venv/bin/activate && \
 	pyinstaller --noconfirm --onefile --paths $(shell find venv -type d -name site-packages) \
 		--name pgbackrest_exporter --strip pgbackrest_exporter/__main__.py
+	dist/pgbackrest_exporter --version
+	xz --keep --verbose --force dist/pgbackrest_exporter
 
 clean:
 	rm -rf venv .pytest_cache build dist *.spec
